@@ -33,6 +33,6 @@ duration = gets.chomp.to_f
 puts "Interest?"
 interest = (gets.chomp.to_f/100)
 # When relevant, it is expressed monthly, not yearly
-monthly_payment = loan_amount * ((interest/12) / (1 - (1 + (interest/12))**(-duration)))
+monthly_payment = (loan_amount * ((interest/12) / (1 - (1 + (interest/12))**(-duration)))).round(2)
 
 puts monthly_payment
